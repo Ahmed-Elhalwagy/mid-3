@@ -149,6 +149,7 @@ img {
     display: flex;
   flex-direction: column;
   gap: 10px;
+  
 }
 .section-1 .content .right .lists ul li{
   position: relative;
@@ -158,6 +159,8 @@ img {
   color: #FFF;
   max-width: 70%;
 }
+
+
 .section-1 .content .right .lists ul li::after {
   content: "";
   display: inline-block; 
@@ -390,7 +393,7 @@ font-weight: 600;
 
 .section-3 .container .right h4{
   color: #771d5b;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-top: 40px;
 }
 
@@ -418,9 +421,10 @@ font-weight: 600;
 .section-3 .container .right .lists ul li {
   color: #FFF;
   font-size: 1rem;
+  
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .section-3 .left {
     display: none;
   }
