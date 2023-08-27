@@ -33,11 +33,19 @@ body{
   gap: 40px;
 }
 section {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   flex-direction: column;
   /* flex-wrap: wrap; */
+}
+
+img {
+  width: 100%;
+}
+
+.section-1{
+  margin-bottom: 4.5em;
 }
 
 .top-text{
@@ -84,63 +92,75 @@ section {
   background: #1ba488;
 }
 
-.main{
+.section-1{
   display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  /* overflow: hidden; */
+}
+.section-1 .content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
 }
 
-.main .right {
-  width: 70%;
-  text-align: center;
+.section-1 .content .right {
+  padding: 20px 40px 10px 40px ;
   display: flex;
   flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  gap: 10px;
-  position: relative;
+  align-items: center;
   background: #1ba488;
-  padding: 20px;
+  min-width: 70%;
+  /* color: #FFF; */
+  gap:30px;
+  z-index: -2;
 }
 
-.main .right h3 {
+.section-1 .content .right h3{
   background: #FFF;
   width: fit-content;
-  padding: 15px;
+  padding: 8px;
   border-radius: 0px 25px 0px 25px;
   color: #771d5b;
   font-size: 1.5rem;
-
 }
-.main .right p {
+.section-1 .content .right p{
   color: #FFF;
-  width: 80%;
+  max-width: 80%;
   text-align: start;
   align-self: flex-start;
+
 }
-.main .right .lists {
+
+.section-1 .right .lists {
   display: flex;
   width: 100%;
   justify-content: space-around;
   gap: 2px;
   width: 80%;
   align-self: flex-start;
-  
+  gap: 30px;
+  margin-right: 3rem;
 }
 
-.main .right .lists ul{
+.section-1 .content .right .lists ul{
     list-style-type: none;
     display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
 }
-.main .right .lists ul li{
+.section-1 .content .right .lists ul li{
   position: relative;
   text-align: start;
   width: 80%;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   color: #FFF;
+  max-width: 70%;
 }
-.main .right .lists ul li::after {
+.section-1 .content .right .lists ul li::after {
   content: "";
   display: inline-block; 
   margin-left: 5px;
@@ -150,50 +170,97 @@ section {
   width: 7px;
   height: 7px;
   background: #771d5b;
+} 
+
+@media only screen and (max-width: 1300px) {
+  .section-1 .content .right {
+    font-size: 0.8em;
+  }
 }
 
-.main .image-container {
-  position: absolute;
-  bottom:5%;
-  left:-35%;
-}
-
-.image-container{
-  max-width:55%;
-}
-img{
+.section-1 .content .left{
   max-width: 100%;
 }
 
-.main .right .front-div{
-  background: #771d5b;
-  max-width: 55%;
-  position: absolute;
-  bottom:-15%;
-  left:-30%;
-}
-.main .right .front-div p {
-  text-align: center;
-  width: 100%;
-  padding: 15px;
+.section-1 .content .left .image-container{
+  max-width: 100%;
+  position: relative;
+  left: 40%;
+  top: 20%;
+  z-index: -1;
 }
 
-@media only screen and (max-width: 1100px) {
-.section-1 .top-text{
-  width: 90%;
-  font-size: 0.9rem;
-}
-.main .right .front-div p {
+.section-1 .content .left .front-div{
+  background-color: #771d5b;
+  padding: 10px;
   font-size: 0.8rem;
+  text-align: center;
+  color: #FFF;
+  z-index: 999;
+  position: relative;
+  left: 50%;
+  top: 7%;
+  margin-right: 20px;
 }
-.main .right h3 {
-  font-size: 1rem;
+
+@media only screen and (max-width: 1300px) {
+  .section-1 .content .left{
+  min-width: 40%;
+  }
+  .section-1 .content .left .front-div{
+  left: 45%;
+  }
 }
-.main .right p {
+@media only screen and (max-width: 950px) {
+ .section-1 .content {
+  flex-direction: column;
+ }
+ .section-1 .content .right{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  font-size: 0.8rem;
+ }
+ .section-1 .content .right p{
+  min-width: 100%;
+  font-size: 0.9em;
 }
+.section-1 .content .right .lists{
+  min-width: 100%;
+  margin: 0;
+  
 }
+.section-1 .content .left {
+  width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+ .section-1 .content .left .image-container{
+display: none;
+ height: 80%;
+}
+.section-1 .content .left .front-div{
+  position: static;
+ }
+ .section-1 .content .left .front-div {
+  margin: 0;
+  width: 100%;
+  font-size: 0.9em;
+  padding: auto;
+  margin-top: 10px;
+}
+.section-1 .content .left .front-div p {
+  height: 100%;
+ }
+ .section-1 .content .left .image-container {
+  width: 50%;
+ }
+}
+
+
+
+/*  */
 
 .section-2{
   background: #edeced;
