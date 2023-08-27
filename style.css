@@ -212,6 +212,10 @@ img {
   }
 }
 @media only screen and (max-width: 950px) {
+  .section-1 .top-text {
+    width: 90%;
+    font-size: 0.8em;
+  }
  .section-1 .content {
   flex-direction: column;
  }
@@ -227,8 +231,8 @@ img {
 }
 .section-1 .content .right .lists{
   min-width: 100%;
-  margin: 0;
-  
+  margin-right: 20px;
+  font-size: 0.8em;
 }
 .section-1 .content .left {
   width: 100%;
@@ -298,6 +302,30 @@ font-weight: 600;
 
 .section-2 .right p {
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .section-2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-2 .right {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-2{
+    gap: 0;
+  }
+  .section-2 .right h3 {
+    font-size: 1.5em;
+  }
+  .section-2 .right h4 {
+    font-size: 0.8em;
+  }
+  .section-2 .right p {
+    font-size: 0.6em;
+  }
 }
 
 .section-3 {
