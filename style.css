@@ -250,7 +250,7 @@ display: none;
   width: 100%;
   font-size: 0.9em;
   padding: auto;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .section-1 .content .left .front-div p {
   height: 100%;
@@ -330,7 +330,7 @@ font-weight: 600;
   display: flex;
   align-items: start;
   justify-content: center;
-  margin-top: 80px;
+  margin-top: 20px;
 }
 
 .section-3 .container {
@@ -338,7 +338,6 @@ font-weight: 600;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: #000 1px solid;
   width: 90%;
   background: #1ba488;
   border-radius: 300px 0 0 300px;
@@ -349,6 +348,22 @@ font-weight: 600;
   margin-left: 8em;
   margin-bottom: 10.8em;
 }
+
+@media only screen and (max-width: 2000px) {
+  .section-3 .container .left {
+    margin-left: 8em;
+    margin-bottom: 11em;
+}
+}
+
+
+@media only screen and (max-width: 1500px) {
+  .section-3 .container .left {
+    margin-left: 8em;
+    margin-bottom: 9.6em;
+}
+}
+
 @media only screen and (max-width: 1200px) {
   .section-3 .container .left {
     margin-left: 8em;
@@ -358,7 +373,7 @@ font-weight: 600;
 @media only screen and (max-width: 1000px) {
   .section-3 .container .left {
     margin-left: 8em;
-    margin-bottom: -3em;
+    margin-bottom: 0em;
 }
 
 
@@ -441,8 +456,12 @@ width: 90%;
 .section-3 .container .right p{
   font-size: 0.6em;
 }
+.section-3 .container .right .lists{
+  gap: 20px;
+}
   .section-3 .container .right .lists ul li {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
+    width: 100%   ;
   }
 }
 
@@ -470,7 +489,7 @@ width: 90%;
   justify-content: center;
   align-items: center;
   background: #FFF;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .btn-container .btn-back {
@@ -480,7 +499,7 @@ width: 90%;
   gap:10px;
   background: #1ba488;
   padding: 5px 60px;
-  font-size: 1.5rem;
+  font-size: 1.5rem; 
   text-decoration: none;
   color: #FFF;
   transition: all 0.2s;
@@ -496,4 +515,12 @@ width: 90%;
 
 .btn-container .btn-back:hover {
   background: #771d5b;
+}
+
+@media only screen and (max-width: 600px){
+  .btn-container .btn-back {
+    font-size: 1em;
+  padding: 5px 40px;
+
+  }
 }
