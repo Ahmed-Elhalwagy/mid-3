@@ -9,33 +9,12 @@
 
 body{
   font-family: 'Droid Arabic Kufi', 'Poppins';
-  direction: rtl;
-}
-
-.spacer {
-  aspect-ratio: 16/9;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.curve {
-  background-image: url('./curve.svg');
-}
-
-.curve-container{
-  height:0vh;
 }
 
 .section-1{
   margin-top: 10%;
   gap: 40px;
-}
-section {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  direction: rtl;
 }
 
 img {
@@ -49,7 +28,7 @@ img {
 .top-text{
   width: 70%;
   padding: 20px;
-  text-align: center;
+  text-align: start;
   height: fit-content;
   position: relative;
   font-size: 1.1rem;
@@ -174,6 +153,7 @@ img {
 } 
 
 @media only screen and (max-width: 1300px) {
+
   .section-1 .content .right {
     font-size: 0.8em;
   }
@@ -269,8 +249,12 @@ display: none;
 
 .section-2{
   background: #edeced;
-flex-direction: row;
-justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  direction: rtl;
+
 }
 
 .section-2 .right {
@@ -329,23 +313,26 @@ font-weight: 600;
   }
 }
 
+
 .section-3 {
   display: flex;
   align-items: start;
   justify-content: center;
   margin-top: 20px;
+  direction: ltr;
 }
 
 .section-3 .container {
+  margin-left: 150px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  /* justify-content: space-between; */
   align-items: center;
+  justify-self: start;
   width: 90%;
   background: #1ba488;
   border-radius: 300px 0 0 300px;
 }
-
 .section-3 .container .left {
   height: 15rem;
   margin-left: 8em;
@@ -420,11 +407,14 @@ font-weight: 600;
 
 .section-3 .container .right .lists ul li {
   color: #FFF;
-  font-size: 1rem;
-  
+  font-size: 0.8rem;
+  width: 150px;
 }
 
 @media only screen and (max-width: 1000px) {
+  .section-3 .container{
+    margin-left: 100px;
+  }
   .section-3 .left {
     display: none;
   }
@@ -444,6 +434,7 @@ width: 90%;
 }
 @media only screen and (max-width: 600px) {
   .section-3 .container{
+    margin: 0;
     width: 100%;
   /* height: 0%; */
     border-radius: 0;
@@ -493,7 +484,7 @@ width: 90%;
   justify-content: center;
   align-items: center;
   background: #FFF;
-  margin-top: 20px;
+  margin: 10px 0;
 }
 
 .btn-container .btn-back {
